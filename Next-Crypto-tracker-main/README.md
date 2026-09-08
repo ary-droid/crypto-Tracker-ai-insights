@@ -1,122 +1,70 @@
+# AI-Powered Crypto Tracker
 
-Show me a better crypto tracker in terms of featues, functiopnalities and ui ux, I'll wait 😎 (Jk)
+A cryptocurrency tracking and portfolio management web application built with Next.js and TypeScript. The application combines cryptocurrency market data with Google Gemini-powered features to provide portfolio assistance, AI-generated insights, and natural-language crypto queries.
 
-A crypto tracker web app built using => 
-## TECH STACK
-- next js 
-- TS 
-- redux-toolkit 
-- tailwind.
- 
-with the home page and coin detail page. 
+## 1. Project Overview
 
- ## TOP FEATURES 
-- Top 10 coins section
-- Pagination with 4 pages, 20 coins on each page
-- Filtering out on category between all coins, metaverse, and gaming category coins.
-- search filter to search for coins
-- sorting from low to high and high to low based on current price 
-- added a favourites section for the user to bookmark coins and they get added in a list with state management using redux, added both star marking the coins as well as even removing it.
-- added currency  switching between usd and inr
--  the coin detail page with additional details about the coin, such as chart, market-cap, volume and other stats
-- reccomended coins section at the coin detail page 
-- tailwind for styling
-- and yes fully responsive
+The AI-Powered Crypto Tracker allows users to explore cryptocurrency market information, manage their portfolio holdings, view portfolio allocation, and interact with AI features.
 
+The project combines traditional application logic with a Large Language Model (LLM):
 
-DO STAR THE REPO 🌟
+- Cryptocurrency market data is used as application input.
+- Portfolio values and allocations are calculated by the application.
+- Google Gemini is used to understand user queries and generate natural-language insights.
+- Next.js API routes act as the server-side layer between the frontend and AI services.
 
+## 2. Features
 
-Image preview, Home page => 
+- Cryptocurrency market tracking
+- Cryptocurrency search and exploration
+- Portfolio/holdings management
+- Portfolio value and allocation calculations
+- Interactive market/portfolio visualizations
+- AI-powered portfolio chat
+- AI-generated portfolio insights
+- Natural-language cryptocurrency queries
+- Portfolio rebalancing calculations
+- Responsive web interface
 
-![Homepage](https://live.staticflickr.com/65535/52813460063_a22921bda4_c.jpg)
+## 3. AI/LLM Features
 
+### AI Portfolio Chat
 
-![Homepage](https://live.staticflickr.com/65535/52813419025_600b477df8_z.jpg)
+Users can ask questions about their portfolio in natural language.
 
+Example:
 
-![Homepage](https://live.staticflickr.com/65535/52813202794_68d51603b0_z.jpg)
+> "Is my portfolio diversified?"
 
+The application provides Gemini with the user's question and relevant portfolio context. Gemini then generates a conversational response.
 
-![Homepage](https://live.staticflickr.com/65535/52813202834_6c17b90501_z.jpg)
+### AI Portfolio Insights
 
+The application sends relevant portfolio information to Gemini and asks the LLM to generate a concise, human-readable analysis.
 
-![Homepage](https://live.staticflickr.com/65535/52813419115_46b10d308e_z.jpg)
+The application performs portfolio calculations first, such as asset values and allocation percentages. Gemini is then used to interpret that information and produce an explanation.
 
+### Natural-Language Crypto Queries
 
-![Homepage](https://live.staticflickr.com/65535/52812449907_99bae25ee5_z.jpg)
+Users can describe a desired crypto filter using natural language.
 
+Example:
 
-![Homepage](https://live.staticflickr.com/65535/52813202904_10e3083c1e_c.jpg)
+> "Show me coins that gained more than 10%."
 
+Gemini interprets the request and converts it into structured information that the application can use to filter cryptocurrency data.
 
+The actual filtering is performed by the application's normal programming logic.
 
-Resposive version =>
-
-
-![Homepage](https://live.staticflickr.com/65535/52813006546_760151c627_w.jpg)
-
-
-![Homepage](https://live.staticflickr.com/65535/52813006561_eb0cd28801_w.jpg)
-
-
-Coin Deatil Page =>
-
-![Homepage](https://live.staticflickr.com/65535/52812450032_f2875bfaeb_z.jpg)
-
-
-![Homepage](https://live.staticflickr.com/65535/52812450052_157e532dd4_z.jpg)
-
-
-![Homepage](https://live.staticflickr.com/65535/52813419295_4c9db18f5b_z.jpg)
-
-
-![Homepage](https://live.staticflickr.com/65535/52813203089_6b7ab1b87d_z.jpg)
-
-
-
-DO STAR THE REPO 🌟
-
-
-
-
-
-
-This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
-
-## Getting Started
-
-First, run the development server:
-
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-```
-
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
-
-You can start editing the page by modifying `pages/index.tsx`. The page auto-updates as you edit the file.
-
-[API routes](https://nextjs.org/docs/api-routes/introduction) can be accessed on [http://localhost:3000/api/hello](http://localhost:3000/api/hello). This endpoint can be edited in `pages/api/hello.ts`.
-
-The `pages/api` directory is mapped to `/api/*`. Files in this directory are treated as [API routes](https://nextjs.org/docs/api-routes/introduction) instead of React pages.
-
-This project uses [`next/font`](https://nextjs.org/docs/basic-features/font-optimization) to automatically optimize and load Inter, a custom Google Font.
-
-## Learn More
-
-To learn more about Next.js, take a look at the following resources:
-
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
-
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js/) - your feedback and contributions are welcome!
-
-## Deploy on Vercel
-
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
-
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/deployment) for more details.
+### Gemini Integration Flow
+User Input / Portfolio Data
+            ↓
+      Next.js API Route
+            ↓
+     Prompt + Context
+            ↓
+       Gemini LLM
+            ↓
+    Generated Response
+            ↓
+          Frontend
